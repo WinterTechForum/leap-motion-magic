@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Magic</title>
+        <link rel="stylesheet" type="text/css" href="magic.css">
+    </head>
+    <body>
+      <audio src="music.mp3" autoplay></audio>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
+      <script type="text/javascript" src="https://js.leapmotion.com/leap-0.6.4.js"></script>
+      <script type="text/javascript" src="//js.leapmotion.com/leap-plugins-0.1.12.js"></script>
+      <script type="text/javascript" src="//js.leapmotion.com/leap-plugins-0.1.12-utils.min.js"></script>
+      <script type="text/javascript" src="//js.leapmotion.com/leap.rigged-hand-0.1.7.js"></script>
+      <script type="text/javascript" src="//js.leapmotion.com/leap-widgets-0.1.0.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+      <canvas id="drawingCanvas" width="3786" height="826" style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px;"></canvas>
+      <script type="text/javascript" src="./magic.js"></script>
+
+      <img class="feather" src="./feather.svg"/>
+
+      <img src="./star.svg" class="marker right"/>
+      <img src="./star.svg" class="marker left"/>
+      <img src="./star.svg" class="marker up"/>
+      <img src="./star.svg" class="marker down"/>
+    </body>
+</html>
