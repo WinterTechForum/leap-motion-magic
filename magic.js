@@ -62,30 +62,35 @@ let spellFoundTime = 0;
         
         if(isWingardiumLeviosa(motions)) {
           console.log('wingardium leviosa!', motions);
+          writeSpell('Wingardium Leviosa!');
           spellFoundTime = Date.now();
           doLevitate();
         }
 
         else if(isSilencio(motions)) {
           console.log('Silencio!', motions);
+          writeSpell('Silencio!');
           spellFoundTime = Date.now();
           stopMusic();
         }
 
         else if(isFiniteIncantatem(motions)) {
           console.log('finite incantatem', motions);
+          writeSpell('Finite Incantatem!');
           spellFoundTime = Date.now();
           endSpells();
         }
 
         else if (isLumos(motions)) {
           console.log('lumos', motions);
+          writeSpell('Lumos!');
           spellFoundTime = Date.now();
           doIlluminate();
         }
 
         else if (isNox(motions)) {
           console.log('nox', motions);
+          writeSpell('Nox!');
           spellFoundTime = Date.now();
           doDarken();
         }
@@ -210,8 +215,16 @@ const drawPoint = (point) => {
   const ctx = c.getContext("2d");
   ctx.moveTo(0,0);
   ctx.lineTo(200,100);
-  ctx.fillStyle = 'rebeccapurple';
+  ctx.fillStyle = '#aff7ff';
   ctx.fillRect(point[0] - 5,point[1] - 5,10,10);
+};
+
+const writeSpell = (spellName) => {
+  const c = document.getElementById("drawingCanvas");
+  const ctx = c.getContext("2d");
+  ctx.font = "70px Arial";
+  ctx.fillStyle = "#8dd682";
+  ctx.fillText(spellName,650,200);
 };
 
 
@@ -250,5 +263,6 @@ const endSpells = () => {
 
 };
 
+window.writeSpell = writeSpell;
 window.doLevitate = doLevitate;
 window.endSpells = endSpells;
